@@ -12,8 +12,13 @@ Hooks.on('init', () => {
 Hooks.on('updateCombat', (data, opt) => {
 
     if (game.settings.get('foundry-hot-seat-observer', 'hotSeatObserver')) {
-        if (game.user.isGM === false && game.user.name == 'Observer') {
-            // Do Thing
+        if (game.user.isGM === false && (game.user.name == 'Observer' || game.user.name == 'Hot Seat')) {
+            var currentCombatant = data.combatant;
+
+            if(currentCombatant.owner 
+                && currentCombatant.visible
+                ){
+            }
         }
     }
 });
