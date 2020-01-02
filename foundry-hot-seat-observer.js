@@ -1,7 +1,7 @@
 Hooks.on('init', () => {
-    game.settings.register("actually-private-rolls", "hidePrivateRolls", {
-        name: "Hide Private Rolls",
-        hint: "Enable this to hide Private GM Rolls unless they are GM or the one that rolled.",
+    game.settings.register("foundry-hot-seat-observer", "hotSeatObserver", {
+        name: "Hot Seat Observer",
+        hint: "Enable this to allow a Hot-Seat player to function in a hot seat matter",
         scope: "world",
         config: true,
         default: true,
@@ -9,9 +9,9 @@ Hooks.on('init', () => {
     });
 });
 
-Hooks.on('renderChatMessage', (app, html, msg) => {
+Hooks.on('updateCombat', (data, opt) => {
 
-    if (game.settings.get('actually-private-rolls', 'hidePrivateRolls') && msg.isWhisper === 1) {
+    if (game.settings.get('foundry-hot-seat-observer', 'hotSeatObserver')) {
         if (game.user.isGM === false && game.user.data._id !== msg.author.data._id) {
             html.hide();
         }
