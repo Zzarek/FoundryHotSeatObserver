@@ -11,7 +11,7 @@ Classically hotseat refered to players taking turns at a keyboard, so in the sam
 
 ## Future Feature ideas based on demand
  1. Ideally configuring the name of the hot seat role would be a viable option, as opposed to a pair of hardcoded names
- 2. Allowing tihs module to extend into players running multiple characters
+ 2. Allowing tihs module to extend into players running multiple characters split screen or not (also on an optional basis)
  
 ## Other Notes
 This has only been tested in the WHRP4 game system, though there is no reason to assume it wouldn't be universal that I can see.
