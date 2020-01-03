@@ -18,10 +18,13 @@ Hooks.on('updateCombat', (data, opt) => {
             if(currentCombatant.owner 
                 && currentCombatant.visible
                 ){
-
                     game.user.update({character: currentCombatant.actor.id});
-                    let token = canvas.tokens.placeables.filter(t => t.actor && t.actor.hasPerm(game.user, "OBSERVER")).shift();
-                    token.control({initializeSight: false});
+                    let token = canvas.tokens.placeables
+                        .filter(t => t.actor && t.actor.hasPerm(game.user, "OBSERVER")).find(a => a.id == currentCombatant.token.id);
+                    if(token)    
+                        token.control({initializeSight: false});
+
+
             }
         }
     }
