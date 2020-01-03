@@ -13,3 +13,5 @@ Classically hotseat refered to players taking turns at a keyboard, so in the sam
  1. Ideally configuring the name of the hot seat role will be ideal, as opposed to a pair of hardcoded names
  2. Allowing tihs module to extend into players running multiple characters
  
+## Other Notes
+This has only been tested in the WHRP4 game system, though there is no reason to assume it wouldn't be universal that I can see.
