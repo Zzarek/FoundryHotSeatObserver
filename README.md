@@ -7,7 +7,7 @@ Classically hotseat refered to players taking turns at a keyboard, so in the sam
 
 ## Current Use Configuration
  
- Currently to use this module you need to add a player named either 'Observer' or 'Hot Seat'. This player should be assigned as owner for every charachter. 
+ Currently to use this module you need to add a player named either 'Observer' or 'Hot Seat'. This player should be assigned as owner for every character you want the player to access.
 
 ## Future Feature ideas based on demand
  1. Ideally configuring the name of the hot seat role will be ideal, as opposed to a pair of hardcoded names
