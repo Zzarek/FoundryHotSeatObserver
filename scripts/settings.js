@@ -1,7 +1,7 @@
 Hooks.on('init', () => {
     game.settings.register("foundry-hot-seat-observer", "hotSeatObserver", {
        	name: "Hot Seat Observer",
-       	hint: game.i18n.localize("fhso.toggleGMSelect.hint"),
+       	hint: "Enable Module",
        	scope: "world",
        	config: true,
        	default: true,
@@ -9,21 +9,21 @@ Hooks.on('init', () => {
     });
     
    game.settings.register("foundry-hot-seat-observer", "toggleGMSelect", {
-	name: "GM",
-	hint: "Allow GM",
+	name: game.i18n.localize("fhso.toggleGMSelect.name"),
+	hint: game.i18n.localize("fhso.toggleGMSelect.hint"),
 	scope: "world",
 	config: true,
 	default: false,
 	type: Boolean
     });
   
-//  game.settings.register("foundryhotseatobserver", "hotSeatPlayerName", {
-//		name: game.i18n.localize("fhso.hotSeatPlayerName.name"),
-//		hint: game.i18n.localize("fhso.hotSeatPlayerName.hint"),
-//		scope: "world",
-//		config: true,
-//		default: true,
-//		type: String
-//	});
+  game.settings.register("foundry-hot-seat-observer", "hotSeatPlayerName", {
+		name: game.i18n.localize("fhso.hotSeatPlayerName.name"),
+		hint: game.i18n.localize("fhso.hotSeatPlayerName.hint"),
+		scope: "world",
+		config: true,
+		default: true,
+		type: String
+	});
 
 });
