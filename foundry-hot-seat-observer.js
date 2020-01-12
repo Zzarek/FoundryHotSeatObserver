@@ -7,6 +7,15 @@ Hooks.on('init', () => {
         default: true,
         type: Boolean,
     });
+    
+    game.settings.register("foundryhotseatobserver", "toggleGMSelect", {
+		name: game.i18n.localize("fhso.toggleGMSelect.name"),
+		hint: game.i18n.localize("fhso.toggleGMSelect.hint"),
+		scope: "world",
+		config: true,
+		default: false,
+		type: Boolean
+	});
 });
 
 Hooks.on('updateCombat', (data, opt) => {
