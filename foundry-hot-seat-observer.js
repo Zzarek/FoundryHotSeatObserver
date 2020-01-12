@@ -3,6 +3,7 @@ Hooks.on('updateCombat', (data, opt) => {
     if (game.settings.get('foundry-hot-seat-observer', 'hotSeatObserver')) {
          let player = game.settings.get('foundry-hot-seat-observer', 'hotSeatPlayerName')
 
+         //Leave Hot Seat in for Legacy and testing.
         if (game.user.isGM === false && (game.user.name == player || game.user.name == 'Hot Seat')) {
             var currentCombatant = data.combatant;
 
