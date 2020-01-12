@@ -1,14 +1,14 @@
 Hooks.on('init', () => {
     game.settings.register("foundry-hot-seat-observer", "hotSeatObserver", {
         name: "Hot Seat Observer",
-        hint: "Enable this to allow a Hot-Seat player to function in a hot seat matter",
+        hint: game.i18n.localize("fhso.toggleGMSelect.hint"),
         scope: "world",
         config: true,
         default: true,
         type: Boolean,
     });
     
-    game.settings.register("foundryhotseatobserver", "toggleGMSelect", {
+    game.settings.register("foundry-hot-seat-observer", "toggleGMSelect", {
 		name: game.i18n.localize("fhso.toggleGMSelect.name"),
 		hint: game.i18n.localize("fhso.toggleGMSelect.hint"),
 		scope: "world",
