@@ -18,7 +18,7 @@ Hooks.on("init", () => {
 		scope: "world",
 		config: true,
 		default: true,
-		type: string
+		type: String
 	});
 
 });
