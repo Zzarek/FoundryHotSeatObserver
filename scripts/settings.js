@@ -18,12 +18,12 @@ Hooks.on('init', () => {
     });
   
   game.settings.register("foundry-hot-seat-observer", "hotSeatPlayerName", {
-		name: game.i18n.localize("fhso.hotSeatPlayerName.name"),
-		hint: game.i18n.localize("fhso.hotSeatPlayerName.hint"),
-		scope: "world",
-		config: true,
-		default: true,
-		type: String
-	});
+	name: "PlayerName",
+	hint: "Player",
+	scope: "world",
+	config: true,
+	default: true,
+	type: String
+  });
 
 });
