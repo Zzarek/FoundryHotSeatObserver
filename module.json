@@ -10,7 +10,7 @@
 			"lang": "en",
 			"name": "English",
 			"path": "lang/en.json"
-		},
+		}
 	],
     	"scripts": ["foundry-hot-seat-observer.js", "worldSettings.js"],
     	"url": "https://github.com/zzarek/FoundryHotSeatObserver",
