@@ -1,4 +1,5 @@
 {
+  "I18N.MAINTAINERS": ["Zzarek"],
 
   "fhso.toggleGMSelect.name": "Toggle GM Select Mode"
   "fhso.toggleGMSelect.hint": "Allows GM to select the active token for the hot seat player"
