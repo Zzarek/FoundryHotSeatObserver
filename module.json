@@ -13,7 +13,7 @@
 	],
     	"scripts": [
 		"foundry-hot-seat-observer.js", 
-		"world-settings.js"
+		"./scripts/settings.js"
 	],
     	"url": "https://github.com/zzarek/FoundryHotSeatObserver",
     	"manifest": "https://raw.githubusercontent.com/zzarek/FoundryHotSeatObserver/master/module.json",
