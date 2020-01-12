@@ -4,6 +4,13 @@
 	"description": "Switches Ownserhip and View for specific Player",
 	"version": "0.1.5",
 	"author": "Zzarek",
+	"languages": [
+		{
+			"lang": "en",
+			"name": "English",
+			"path": "lang/en.json"
+		}
+	],
     	"scripts": ["foundry-hot-seat-observer.js", "world-settings.js"],
     	"url": "https://github.com/zzarek/FoundryHotSeatObserver",
     	"manifest": "https://raw.githubusercontent.com/zzarek/FoundryHotSeatObserver/master/module.json",
