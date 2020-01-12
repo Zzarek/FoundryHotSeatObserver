@@ -8,14 +8,14 @@ Hooks.on('init', () => {
 	type: Boolean,
     });
     
-    game.settings.register("foundry-hot-seat-observer", "toggleGMSelect", {
-		name: game.i18n.localize("fhso.toggleGMSelect.name"),
-		hint: game.i18n.localize("fhso.toggleGMSelect.hint"),
-		scope: "world",
-		config: true,
-		default: false,
-		type: Boolean
-	});
+   game.settings.register("foundry-hot-seat-observer", "toggleGMSelect", {
+	name: "GM",
+	hint: "Allow GM",
+	scope: "world",
+	config: true,
+	default: false,
+	type: Boolean
+    });
   
 //  game.settings.register("foundryhotseatobserver", "hotSeatPlayerName", {
 //		name: game.i18n.localize("fhso.hotSeatPlayerName.name"),
