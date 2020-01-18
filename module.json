@@ -13,7 +13,6 @@
 	],
     	"scripts": [
 		"./scripts/settings.js",
-		"./scripts/gmHotSeatDriver.js",
 		"foundry-hot-seat-observer.js" 
 	],
     	"url": "https://github.com/zzarek/FoundryHotSeatObserver",
