@@ -13,10 +13,11 @@
 	],
     	"scripts": [
 		"./scripts/settings.js",
+		"./scripts/gmHotSeatDriver.js",
 		"foundry-hot-seat-observer.js" 
 	],
     	"url": "https://github.com/zzarek/FoundryHotSeatObserver",
     	"manifest": "https://raw.githubusercontent.com/zzarek/FoundryHotSeatObserver/master/module.json",
     	"download": "https://github.com/zzarek/FoundryHotSeatObserver/archive/master.zip",
-	"minimumCoreVersion": "0.4.5"
+	    "minimumCoreVersion": "0.4.5"
 }
