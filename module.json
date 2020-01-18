@@ -2,7 +2,7 @@
 	"name": "foundry-hot-seat-observer",
 	"title": "Hot Seat Observer",
 	"description": "Switches Ownserhip and View for specific Player",
-	"version": "0.2.09",
+	"version": "0.2.08",
 	"author": "Zzarek",
 	"languages": [
 		{
@@ -17,7 +17,7 @@
 		"foundry-hot-seat-observer.js" 
 	],
     	"url": "https://github.com/zzarek/FoundryHotSeatObserver",
-    	"manifest": "https://raw.githubusercontent.com/zzarek/FoundryHotSeatObserver/GMSelect/module.json",
-    	"download": "https://github.com/zzarek/FoundryHotSeatObserver/archive/GMSelect.zip",
-	"minimumCoreVersion": "0.4.3"
+    	"manifest": "https://raw.githubusercontent.com/zzarek/FoundryHotSeatObserver/master/module.json",
+    	"download": "https://github.com/zzarek/FoundryHotSeatObserver/archive/master.zip",
+	    "minimumCoreVersion": "0.4.5"
 }
