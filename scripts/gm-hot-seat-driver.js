@@ -1,8 +1,14 @@
 Hooks.on("controlToken", (token, isControlled) => {
-      if (game.settings.get('foundry-hot-seat-observer', 'hotSeatObserver') && game.settings.get('foundry-hot-seat-observer', 'toggleGMSelect')) {
+	  let gameSettingsEnabled = game.settings.get('foundry-hot-seat-observer', 'hotSeatObserver') && game.settings.get('foundry-hot-seat-observer', 'toggleGMSelect');
+	  let tokenViableForChange = token.actor.isPc && !isControlled;
+      if (gameSettingsEnabled && tokenViableForChange && game.user.isGM === true) {
+	
+
+	            let x = 2;
+
+      	
 
       }
 
-	let x = 2;
 });
 
