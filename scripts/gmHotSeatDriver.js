@@ -1,10 +1,11 @@
 class GMSHotSeatDriver {
 	static init() {
-		window.addEventListener('keydown', ev => {
+		window.addEventListener('mousedown', ev => {
 			 if (canvas.activeLayer.controlled.length)
            			 return true;
 
-		}
+		
+		});
 	}
 }
 
