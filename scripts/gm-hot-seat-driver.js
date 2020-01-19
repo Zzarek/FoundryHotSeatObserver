@@ -16,7 +16,9 @@ Hooks.on("controlToken", (token, isControlled) => {
 
                let options = {};
 
-               SocketInterface.trigger('updateToken', {data: updateData}, options, {postHook:'updateToken' });
+               game.socket.emit('module.hotSeatObserver', updateData);
+
+               //SocketInterface.trigger('updateToken', {data: updateData}, options, {postHook:'updateToken' });
             }
             else if(hotSeatPlayerUser && !isControlled){
                 
@@ -33,4 +35,12 @@ Hooks.on("controlToken", (token, isControlled) => {
 Hooks.on("updateToken", (data) => {
 
 	let x = 2;
+});
+
+
+Hooks.on('canvasInit', () => {
+   game.socket.on('module.hotSeatObserver', data => {
+            this._socketHandler(data);
+        });
+
 });
