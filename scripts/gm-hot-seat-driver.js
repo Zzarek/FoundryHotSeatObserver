@@ -40,7 +40,7 @@ Hooks.on("updateToken", (data) => {
 
 Hooks.on('canvasInit', () => {
    game.socket.on('module.hotSeatObserver', data => {
-            this._socketHandler(data);
+            console.info(data);
         });
 
 });
