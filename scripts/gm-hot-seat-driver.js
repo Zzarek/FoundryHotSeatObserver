@@ -16,7 +16,7 @@ Hooks.on("controlToken", (token, isControlled) => {
 
                let options = {};
 
-               SocketInterface.trigger('updateToken', {data: updateData});
+               SocketInterface.trigger('updateToken', {data: updateData}, options, {postHook:'updateToken' });
             }
             else if(hotSeatPlayerUser && !isControlled){
                 
