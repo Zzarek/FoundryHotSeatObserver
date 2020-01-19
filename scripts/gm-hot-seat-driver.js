@@ -16,11 +16,7 @@ Hooks.on("controlToken", (token, isControlled) => {
 
                let options = {};
 
-               SocketInterface.trigger('test', {data: updateData}, options, {
-                  context: this,
-                  success: Hooks.callAll("test", token, hotSeatPlayerUser),
-                  postHook: 'test'
-		        });
+               SocketInterface.trigger('updateToken', {data: updateData});
             }
             else if(hotSeatPlayerUser && !isControlled){
                 
@@ -34,7 +30,7 @@ Hooks.on("controlToken", (token, isControlled) => {
 });
 
 
-Hooks.on("test", (token, user) => {
+Hooks.on("updateToken", (data) => {
 
 	let x = 2;
 });
