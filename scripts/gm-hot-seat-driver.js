@@ -7,8 +7,20 @@ Hooks.on("controlToken", (token, isControlled) => {
 
             if(hotSeatPlayerUser && isControlled){
                hotSeatPlayerUser.update({character: token.actor.id});
-               Hooks.callAll("test", token, hotSeatPlayerUser);
-              
+               //Hooks.callAll("test", token, hotSeatPlayerUser);
+
+               let updateData = {
+               	    user: hotSeatPlayerUser,
+               	    token: token
+               }
+
+               let options = {};
+
+               SocketInterface.trigger('test', {data: updateData}, options, {
+                  context: this,
+                  success: Hooks.callAll("test", token, hotSeatPlayerUser),
+                  postHook: 'test'
+		        });
             }
             else if(hotSeatPlayerUser && !isControlled){
                 
@@ -24,5 +36,5 @@ Hooks.on("controlToken", (token, isControlled) => {
 
 Hooks.on("test", (token, user) => {
 
-	
+	let x = 2;
 });
