@@ -7,12 +7,8 @@ Hooks.on("controlToken", (token, isControlled) => {
 
             if(hotSeatPlayerUser && isControlled){
                hotSeatPlayerUser.update({character: token.actor.id});
-
             }
-            else if(hotSeatPlayerUser && !isControlled){
-                hotSeatPlayerUser.update({character: token.actor.id, release: true});
 
-            }
 
       }
 });
