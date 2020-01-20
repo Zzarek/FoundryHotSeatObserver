@@ -15,7 +15,7 @@ Hooks.on("controlToken", (token, isControlled) => {
 
 Hooks.on("updateUser", (user, updateData, options, userId) => {
     let isCorrectUser = game.user._id == updateData._id && !game.user.isGM && game.user.name == game.settings.get('foundry-hot-seat-observer', 'hotSeatPlayerName');
-    if ( isCorrectUser && updateData.hasOwnProperty("character") {
+    if ( isCorrectUser && updateData.hasOwnProperty("character")) {
     const actor = game.actors.get(updateData.character);
     const tokens = actor.getActiveTokens();
     if ( tokens.length ) tokens[0].control();
