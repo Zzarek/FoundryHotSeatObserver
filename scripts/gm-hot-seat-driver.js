@@ -10,19 +10,16 @@ Hooks.on("controlToken", (token, isControlled) => {
 
             }
             else if(hotSeatPlayerUser && !isControlled){
-                hotSeatPlayerUser.update({character: null});
+                hotSeatPlayerUser.update({character: token.actor.id, release: true});
 
             }
-            //let.game
-
-
-      	
 
       }
 });
 
 Hooks.on("updateUser", (user, updateData, options, userId) => {
-  if ( !user.isGM  && "character" in updateData && updateData.character != null) {
+	let isCorrectUser = game.user._id == updateData._id && !game.user.isGM;
+    if ( isCorrectUser  && "character" in updateData) {
     const actor = game.actors.get(updateData.character);
     const tokens = actor.getActiveTokens();
     if ( tokens.length ) tokens[0].control();
