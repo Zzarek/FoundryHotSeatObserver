@@ -10,7 +10,8 @@ Hooks.on("controlToken", (token, isControlled) => {
 
             }
             else if(hotSeatPlayerUser && !isControlled){
-                
+                hotSeatPlayerUser.update({character: null});
+
             }
             //let.game
 
@@ -21,7 +22,7 @@ Hooks.on("controlToken", (token, isControlled) => {
 });
 
 Hooks.on("updateUser", (user, updateData, options, userId) => {
-  if ( "character" in updateData ) {
+  if ( !user.isGM  && "character" in updateData && updateData.character != null) {
     const actor = game.actors.get(updateData.character);
     const tokens = actor.getActiveTokens();
     if ( tokens.length ) tokens[0].control();
