@@ -7,18 +7,7 @@ Hooks.on("controlToken", (token, isControlled) => {
 
             if(hotSeatPlayerUser && isControlled){
                hotSeatPlayerUser.update({character: token.actor.id});
-               //Hooks.callAll("test", token, hotSeatPlayerUser);
 
-               let updateData = {
-               	    user: hotSeatPlayerUser,
-               	    token: token
-               }
-
-               let options = {};
-
-               game.socket.emit('module.hotSeatObserver', updateData);
-
-               //SocketInterface.trigger('updateToken', {data: updateData}, options, {postHook:'updateToken' });
             }
             else if(hotSeatPlayerUser && !isControlled){
                 
@@ -31,16 +20,13 @@ Hooks.on("controlToken", (token, isControlled) => {
       }
 });
 
-
-Hooks.on("updateToken", (data) => {
-
-	let x = 2;
+Hooks.on("updateUser", (user, updateData, options, userId) => {
+  if ( "character" in updateData ) {
+    const actor = game.actors.get(updateData.character);
+    const tokens = actor.getActiveTokens();
+    if ( tokens.length ) tokens[0].control();
+  }
 });
 
 
-Hooks.on('canvasInit', () => {
-   game.socket.on('module.hotSeatObserver', data => {
-            console.info(data);
-        });
 
-});
