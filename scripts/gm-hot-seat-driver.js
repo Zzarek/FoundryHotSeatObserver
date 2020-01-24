@@ -8,6 +8,8 @@ Hooks.on("controlToken", (token, isControlled) => {
             if(hotSeatPlayerUser){
               	hotSeatPlayerUser.update({character: token.actor.id}, {controlled: isControlled});
             }
+		
+		
 	}
 });
 
@@ -21,6 +23,13 @@ Hooks.on("updateUser", (user, updateData, options, userId) => {
     		const tokens = actor.getActiveTokens();
     		if ( tokens.length && options.controlled ) tokens[0].control();
 		else if (tokens.length && !options.controlled) tokens[0].release();	
+	}
+});
+
+Hooks.on("updateActor", (actor, actorData, options, actorId) => {
+	let gameSettingsEnabled = game.settings.get('foundry-hot-seat-observer', 'hotSeatObserver') && game.settings.get('foundry-hot-seat-observer', 'toggleGMSelect');
+	//let isCorrectUser = game.user._id == updateData._id && !game.user.isGM && game.user.name == game.settings.get('foundry-hot-seat-observer', 'hotSeatPlayerName');
+	if(gameSettingsEnabled){
 	}
 });
 
