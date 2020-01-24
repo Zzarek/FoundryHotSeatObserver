@@ -5,9 +5,10 @@ Hooks.on("controlToken", (token, isControlled) => {
 	        let hotSeatPlayerName = game.settings.get('foundry-hot-seat-observer', 'hotSeatPlayerName')
             let hotSeatPlayerUser = game.users.players.find(t => t.name === hotSeatPlayerName);
 
-            if(hotSeatPlayerUser && isControlled){
-               hotSeatPlayerUser.update({character: token.actor.id});
+             if(hotSeatPlayerUser){
+               hotSeatPlayerUser.update({character: token.actor.id, controlled: isControlled});
             }
+
 
 
       }
