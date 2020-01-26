@@ -1,6 +1,8 @@
 {
   "I18N.MAINTAINERS": ["Zzarek"],
 
+  "fhso.enableModule.name": "Enable Hot Seat Module",
+  "fhso.enableModule.hint": "Activates or deactivates all features of Module",
   "fhso.toggleGMSelect.name": "Toggle GM Select Mode",
   "fhso.toggleGMSelect.hint": "Allows GM to select the active token for the hot seat player",
   "fhso.hotSeatPlayerName.name": "Hot Seat Player Name",
