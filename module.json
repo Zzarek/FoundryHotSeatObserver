@@ -18,6 +18,6 @@
 	],
     	"url": "https://github.com/zzarek/FoundryHotSeatObserver",
     	"manifest": "https://raw.githubusercontent.com/zzarek/FoundryHotSeatObserver/master/module.json",
-    	"download": "https://github.com/zzarek/FoundryHotSeatObserver/master/GMSelect.zip",
+    	"download": "https://github.com/zzarek/FoundryHotSeatObserver/master/master.zip",
 	"minimumCoreVersion": "0.4.5"
 }
