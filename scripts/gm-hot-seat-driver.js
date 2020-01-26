@@ -6,7 +6,7 @@ Hooks.on("controlToken", (token, isControlled) => {
             let hotSeatPlayerUser = game.users.players.find(t => t.name === hotSeatPlayerName);
 
             if(hotSeatPlayerUser){
-              	hotSeatPlayerUser.update({character: token.actor.id, dummy: isControlled}, {controlled: isControlled, character: token.actor.id});
+              	hotSeatPlayerUser.update({}, {diff: false, controlled: isControlled, character: token.actor.id});
             }
 	
 	}
