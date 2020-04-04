@@ -26,4 +26,13 @@ Hooks.on('init', () => {
 	type: String
   });
 
+  game.settings.register("foundry-hot-seat-observer", "cameraMoveOnInitiative", {
+	name: game.i18n.localize("fhso.cameraMoveOnInitiative.name"),
+	hint: game.i18n.localize("fhso.cameraMoveOnInitiative.hint"),
+	scope: "world",
+	config: true,
+	default: true,
+	type: Boolean
+  });
+
 });

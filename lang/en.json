@@ -6,5 +6,7 @@
   "fhso.toggleGMSelect.name": "Toggle GM Select Mode",
   "fhso.toggleGMSelect.hint": "Allows GM to select the active token for the hot seat player",
   "fhso.hotSeatPlayerName.name": "Hot Seat Player Name",
-  "fhso.hotSeatPlayerName.hint": "Overrides player name used for hotseat functionality"
+  "fhso.hotSeatPlayerName.hint": "Overrides player name used for hotseat functionality",
+  "fhso.cameraMoveOnInitiative.name": "Camera Tracks Initiative",
+  "fhso.cameraMoveOnInitiative.hint": "Allows camera to center on next player token on initiative change"
 }
