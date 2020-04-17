@@ -18,9 +18,8 @@ You may choose to have the GM control the entire screen by enabling an option wh
 activates that token
 
 If the Gm controls everything, you may also allow for him to deselect tokens for the observer.
-
-## Potential Future Features
- 1. Allowing tihs module to extend into players running multiple characters split screen or not (also on an optional basis)
  
 ## Other Notes
 This has only been tested in the WHRP4 game system and dnd5e, though there is no reason to assume it wouldn't be universal that I can see.
+
+i18n support is implemented, but only english available as of now.
