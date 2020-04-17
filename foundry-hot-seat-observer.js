@@ -10,7 +10,12 @@ Hooks.on('updateCombat', (data, opt) => {
             if(currentCombatant.owner 
                 && currentCombatant.visible
                 ){
-                    game.user.update({character: currentCombatant.actor.id});
+                    let isCameraPanEnabled = game.settings.get('foundry-hot-seat-observer', 'cameraMoveOnInitiative')
+
+                    if(isCameraPanEnabled)
+                        game.user.update({character: currentCombatant.actor.id});
+                    else
+                        game.user.update({}, {diff: false, character: currentCombatant.actor.id});
                     let token = canvas.tokens.placeables
                         .filter(t => t.actor && t.actor.hasPerm(game.user, "OBSERVER")).find(a => a.id == currentCombatant.token._id);
                     if(token)    
