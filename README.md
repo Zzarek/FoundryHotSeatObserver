@@ -9,8 +9,14 @@ Classically hotseat refered to players taking turns at a keyboard, so in the sam
  
  Currently to use this module you need to add a player named either 'Observer' or 'Hot Seat'. This player should be assigned as owner for every character you want the player to access.
 
+
+You may rename the observer player in the settings
+You may diable camera panning on initiative
+You may choose to have the GM control the entire screen by enabling an option where if he clicks on a player token, the observer activates that token
+If the Gm controls everything, you may also allow for him to deselect tokens for the observer.
+
 ## Potential Future Features
  1. Allowing tihs module to extend into players running multiple characters split screen or not (also on an optional basis)
  
 ## Other Notes
-This has only been tested in the WHRP4 game system, though there is no reason to assume it wouldn't be universal that I can see.
+This has only been tested in the WHRP4 game system and dnd5e, though there is no reason to assume it wouldn't be universal that I can see.
