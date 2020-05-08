@@ -1,16 +1,13 @@
 Hooks.on('updateCombat', (data, opt) => {
 
-    if (game.settings.get('foundry-hot-seat-observer', 'hotSeatObserver')) {
-         let player = game.settings.get('foundry-hot-seat-observer', 'hotSeatPlayerName')
-
+    if (settings.IsModuleActive()) {
          //Leave Hot Seat in for Legacy and testing.
-        if (game.user.isGM === false && (game.user.name == player || game.user.name == 'Hot Seat')) {
+        if (game.user.isGM === false && settings.IsCurrentPlayerInHotSeatRole()) {
             var currentCombatant = data.combatant;
 
-            if(currentCombatant.owner 
-                && currentCombatant.visible
+            if(currentCombatant.owner && currentCombatant.visible
                 ){
-                    let isCameraPanEnabled = game.settings.get('foundry-hot-seat-observer', 'cameraMoveOnInitiative')
+                    let isCameraPanEnabled = settings.IsCameraPanModeOn();
 
                     if(isCameraPanEnabled)
                         game.user.update({character: currentCombatant.actor.id});

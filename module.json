@@ -2,7 +2,7 @@
 	"name": "foundry-hot-seat-observer",
 	"title": "Hot Seat Observer",
 	"description": "Switches Ownserhip and View for specific Player",
-	"version": "0.3.12",
+	"version": "0.3.13",
 	"author": "Zzarek",
 	"languages": [
 		{
@@ -13,6 +13,7 @@
 	],
     	"scripts": [
 		"./scripts/settings.js",
+		"./scripts/settings-register.js",
 		"./scripts/gm-hot-seat-driver.js",
 		"foundry-hot-seat-observer.js" 
 	],

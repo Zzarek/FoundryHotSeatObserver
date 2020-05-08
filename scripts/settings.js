@@ -1,38 +1,26 @@
-Hooks.on('init', () => {
-    game.settings.register("foundry-hot-seat-observer", "hotSeatObserver", {
-       	name: game.i18n.localize("fhso.enableModule.name"),
-       	hint: game.i18n.localize("fhso.enableModule.name"),
-       	scope: "world",
-       	config: true,
-       	default: true,
-	type: Boolean,
-    });
-   
-   game.settings.register("foundry-hot-seat-observer", "toggleGMSelect", {
-	name: game.i18n.localize("fhso.toggleGMSelect.name"),
-	hint: game.i18n.localize("fhso.toggleGMSelect.hint"),
-	scope: "world",
-	config: true,
-	default: false,
-	type: Boolean
-    });
-  
-  game.settings.register("foundry-hot-seat-observer", "hotSeatPlayerName", {
-	name: game.i18n.localize("fhso.hotSeatPlayerName.name"),
-	hint: game.i18n.localize("fhso.hotSeatPlayerName.hint"),
-	scope: "world",
-	config: true,
-	default: "Observer",
-	type: String
-  });
+class settings{
 
-  game.settings.register("foundry-hot-seat-observer", "cameraMoveOnInitiative", {
-	name: game.i18n.localize("fhso.cameraMoveOnInitiative.name"),
-	hint: game.i18n.localize("fhso.cameraMoveOnInitiative.hint"),
-	scope: "world",
-	config: true,
-	default: true,
-	type: Boolean
-  });
 
-});
+    
+    static IsCameraPanModeOn(){
+        return game.settings.get('foundry-hot-seat-observer', 'cameraMoveOnInitiative')
+    }
+
+    static IsGMSelectModeOn(){
+        return game.settings.get('foundry-hot-seat-observer', 'toggleGMSelect')
+    }
+
+    static IsModuleActive(){
+        return game.settings.get('foundry-hot-seat-observer', 'hotSeatObserver');
+    }
+
+    static IsCurrentPlayerInHotSeatRole(){
+        return (game.user.name == RetreiveHotSeatPlayerName() || game.user.name == 'Hot Seat');
+    }
+
+    static RetreiveHotSeatPlayerName(){
+        return game.settings.get('foundry-hot-seat-observer', 'hotSeatPlayerName');
+    }
+
+        
+}
