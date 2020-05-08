@@ -1,3 +1,3 @@
-import { StartUp } from "./scripts/startup.js";
+import { StartUp } from "./modules/startup.js";
 
 StartUp.Register();
