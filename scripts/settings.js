@@ -15,7 +15,7 @@ class settings{
     }
 
     static IsCurrentPlayerInHotSeatRole(){
-        return (game.user.name == RetreiveHotSeatPlayerName() || game.user.name == 'Hot Seat');
+        return (game.user.name == settings.RetreiveHotSeatPlayerName() || game.user.name == 'Hot Seat');
     }
 
     static RetreiveHotSeatPlayerName(){
