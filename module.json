@@ -1,7 +1,7 @@
 {
 	"name": "foundry-hot-seat-observer-test",
 	"title": "Hot Seat Observer Test",
-	"description": "Switches Ownserhip and View for specific Player",
+	"description": "Allows a Hot Seat player role to facilitate play sharing a screen",
 	"version": "0.3.13",
 	"author": "Zzarek",
 	"languages": [
