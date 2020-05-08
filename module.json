@@ -1,8 +1,8 @@
-{
+{ 
 	"name": "foundry-hot-seat-observer-test",
 	"title": "Hot Seat Observer Test",
 	"description": "Allows a Hot Seat player role to facilitate play sharing a screen",
-	"version": "0.3.13",
+	"version": "0.3.14",
 	"author": "Zzarek",
 	"languages": [
 		{
@@ -19,6 +19,6 @@
 	],
     	"url": "https://github.com/zzarek/FoundryHotSeatObserver",
     	"manifest": "https://raw.githubusercontent.com/zzarek/FoundryHotSeatObserver/HiddenTokens/module.json",
-    	"download": "https://github.com/zzarek/FoundryHotSeatObserver/HiddenTokens/master.zip",
+    	"download": "https://github.com/zzarek/FoundryHotSeatObserver/archive/HiddenTokens.zip",
 	"minimumCoreVersion": "0.4.5"
 }
