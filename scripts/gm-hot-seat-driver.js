@@ -1,8 +1,8 @@
 Hooks.on("controlToken", (token, isControlled) => {
-	let gameSettingsEnabled = game.settings.get('foundry-hot-seat-observer', 'hotSeatObserver') && game.settings.get('foundry-hot-seat-observer', 'toggleGMSelect');
+	let gameSettingsEnabled = settings.IsGMSelectModeOn();
 	let tokenViableForChange = token.actor && token.actor.isPC;
       	if (gameSettingsEnabled && tokenViableForChange && game.user.isGM === true) {
-	    let hotSeatPlayerName = game.settings.get('foundry-hot-seat-observer', 'hotSeatPlayerName')
+	    let hotSeatPlayerName = settings.RetreiveHotSeatPlayerName();
             let hotSeatPlayerUser = game.users.players.find(t => t.name === hotSeatPlayerName);
 
             if(hotSeatPlayerUser){
@@ -15,8 +15,8 @@ Hooks.on("controlToken", (token, isControlled) => {
 
 
 Hooks.on("updateUser", (user, updateData, options, userId) => {
-	let gameSettingsEnabled = game.settings.get('foundry-hot-seat-observer', 'hotSeatObserver') && game.settings.get('foundry-hot-seat-observer', 'toggleGMSelect');
-	let isCorrectUser = game.user._id == updateData._id && !game.user.isGM && game.user.name == game.settings.get('foundry-hot-seat-observer', 'hotSeatPlayerName');
+	let gameSettingsEnabled = settings.IsGMSelectModeOn();
+	let isCorrectUser = game.user._id == updateData._id && settings.IsCurrentPlayerInHotSeatRole();
 	if(gameSettingsEnabled && isCorrectUser && options.hasOwnProperty("character") && options.hasOwnProperty("controlled")){
 		const actor = game.actors.get(options.character);
     		const tokens = actor.getActiveTokens();

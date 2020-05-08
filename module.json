@@ -2,7 +2,7 @@
 	"name": "foundry-hot-seat-observer-test",
 	"title": "Hot Seat Observer Test",
 	"description": "Allows a Hot Seat player role to facilitate play sharing a screen",
-	"version": "0.3.15",
+	"version": "0.3.16",
 	"author": "Zzarek",
 	"languages": [
 		{
@@ -12,8 +12,8 @@
 		}
 	],
     	"scripts": [
-		"./scripts/settings.js",
-		"./scripts/settings-register.js",
+		"./scripts/settings/settings.js",
+		"./scripts/settings/settings-register.js",
 		"./scripts/gm-hot-seat-driver.js",
 		"foundry-hot-seat-observer.js" 
 	],
