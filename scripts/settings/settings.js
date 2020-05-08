@@ -12,7 +12,7 @@ class settings{
     }
 
     static IsCurrentPlayerInHotSeatRole(){
-        return !game.user.isGM
+        return !game.user.isGM &&
                 (game.user.name == settings.RetreiveHotSeatPlayerName() || game.user.name == 'Hot Seat');
     }
 
