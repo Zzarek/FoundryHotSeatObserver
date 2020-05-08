@@ -23,8 +23,9 @@ export class StartUp{
             GMSelectMode._OnUpdateUser(user, updateData, options, userId);
         });
 
-        Hooks.on("createToken", (scene, tokenData, options, userId) => {
-            //TokenUtility._onCreateToken(scene, tokenData, options, userId);
+        Hooks.on("renderToken", (token) => {
+            if(token.actor.isPC)
+                token.icon.visible = false;
         });
     }
 }
