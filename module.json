@@ -11,15 +11,15 @@
 			"path": "lang/en.json"
 		}
 	],
-    "scripts": [
+    	"scripts": [
 		"./scripts/settings/settings.js",
 		"./scripts/settings/settings-register.js"
 	],
 	"esmodules": [
 		"foundry-hot-seat-observer.js" 
-	],
-    "url": "https://github.com/zzarek/FoundryHotSeatObserver",
-    "manifest": "https://raw.githubusercontent.com/zzarek/FoundryHotSeatObserver/HiddenTokens/module.json",
-    "download": "https://github.com/zzarek/FoundryHotSeatObserver/archive/HiddenTokens.zip",
+    	],
+    	"url": "https://github.com/zzarek/FoundryHotSeatObserver",
+    	"manifest": "https://raw.githubusercontent.com/zzarek/FoundryHotSeatObserver/HiddenTokens/module.json",
+    	"download": "https://github.com/zzarek/FoundryHotSeatObserver/archive/HiddenTokens.zip",
 	"minimumCoreVersion": "0.5.5"
 }
