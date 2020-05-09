@@ -1,10 +1,12 @@
+import { Settings } from "./settings/settings.js";
+
 export class GMSelectMode{
 
     static _OnControlToken (token, isControlled)  {
-        let gameSettingsEnabled = settings.IsGMSelectModeOn();
+        let gameSettingsEnabled = Settings.IsGMSelectModeOn();
         let tokenViableForChange = token.actor && token.actor.isPC;
               if (gameSettingsEnabled && tokenViableForChange && game.user.isGM === true) {
-                let hotSeatPlayerName = settings.RetreiveHotSeatPlayerName();
+                let hotSeatPlayerName = Settings.RetreiveHotSeatPlayerName();
                 let hotSeatPlayerUser = game.users.players.find(t => t.name === hotSeatPlayerName);
     
                 if(hotSeatPlayerUser){
@@ -14,8 +16,8 @@ export class GMSelectMode{
     }
 
     static _OnUpdateUser (user, updateData, options, userId)  {
-        let gameSettingsEnabled = settings.IsGMSelectModeOn();
-        let isCorrectUser = game.user._id == updateData._id && settings.IsCurrentPlayerInHotSeatRole();
+        let gameSettingsEnabled = Settings.IsGMSelectModeOn();
+        let isCorrectUser = game.user._id == updateData._id && Settings.IsCurrentPlayerInHotSeatRole();
         if(gameSettingsEnabled && isCorrectUser && options.hasOwnProperty("character") && options.hasOwnProperty("controlled")){
             const actor = game.actors.get(options.character);
             const tokens = actor.getActiveTokens();

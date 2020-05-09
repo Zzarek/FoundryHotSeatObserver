@@ -1,3 +1,5 @@
+import { Settings } from "./settings/settings.js";
+
 export class HotSeatInitiative {
 
     static _onUpdateCombat(data, opt) {
