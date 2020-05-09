@@ -2,7 +2,7 @@
   "I18N.MAINTAINERS": ["Zzarek"],
 
   "fhso.enableHotSeatObserver.name": "Enable Hot Seat Module",
-  "fhso.enableHotSeatObserver.hint": "Activates or deactivates all features of Module",
+  "fhso.enableHotSeatObserver.hint": "Activates or deactivates all features of module",
   "fhso.toggleGMSelect.name": "Toggle GM Select Mode",
   "fhso.toggleGMSelect.hint": "Allows GM to select the active token for the hot seat player",
   "fhso.hotSeatPlayerName.name": "Hot Seat Player Name",
@@ -10,5 +10,5 @@
   "fhso.cameraMoveOnInitiative.name": "Camera Tracks Initiative",
   "fhso.cameraMoveOnInitiative.hint": "Allows camera to center on next player token on initiative change",
   "fhso.hidePlayerIcons.name": "Hid Hot Seat Icons",
-  "fhso.hidePlayerIcons.hint": "If using a flat table, and you dont want the models to show under feet"
+  "fhso.hidePlayerIcons.hint": "For hiding player icons when using a horizontal TV as a table for use with models"
 }

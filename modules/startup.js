@@ -26,7 +26,12 @@ export class StartUp{
             GMSelectMode._OnUpdateUser(user, updateData, options, userId);
         });
 
-        Hooks.on("renderToken", (token) => {
+        Hooks.on("updateSettingsConfig", (event, formData) => {
+            HideIconMode._OnControlToken(token);
+
+        });
+
+        Hooks.on("updateFormApplication", (event, formData) => {
             HideIconMode._OnControlToken(token);
 
         });
