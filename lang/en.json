@@ -8,5 +8,7 @@
   "fhso.hotSeatPlayerName.name": "Hot Seat Player Name",
   "fhso.hotSeatPlayerName.hint": "Overrides player name used for hotseat functionality",
   "fhso.cameraMoveOnInitiative.name": "Camera Tracks Initiative",
-  "fhso.cameraMoveOnInitiative.hint": "Allows camera to center on next player token on initiative change"
+  "fhso.cameraMoveOnInitiative.hint": "Allows camera to center on next player token on initiative change",
+  "fhso.hidePlayerIcons.name": "Hid Hot Seat Icons",
+  "fhso.hidePlayerIcons.hint": "If using a flat table, and you dont want the models to show under feet"
 }

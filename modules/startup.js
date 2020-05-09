@@ -26,7 +26,8 @@ export class StartUp{
             GMSelectMode._OnUpdateUser(user, updateData, options, userId);
         });
 
-        Hooks.on("createToken", (token) => {
+        Hooks.on("renderToken", (token) => {
+            HideIconMode._OnControlToken(token);
 
         });
     }
