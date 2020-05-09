@@ -3,7 +3,7 @@ import { Settings } from "./settings.js";
 export class HideIconMode{
 
     static _OnSettingsChanged (enabled)  {
-        let gameSettingsEnabled = settings.HidePlayer();
+        let gameSettingsEnabled = Settings.HidePlayer();
         
         let hotSeatPlayerName = Settings.RetreiveHotSeatPlayerName();
         let hotSeatPlayerUser = game.users.players.find(t => t.name === hotSeatPlayerName);
