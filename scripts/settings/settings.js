@@ -9,7 +9,7 @@ class settings{
     static hidePlayerIconsSettingName = 'hidePlayerIcons';
 
 
-    static HidePlayerSettings(){
+    static HidePlayer(){
         return game.settings.get(settings.moduleName, settings.hidePlayerIconsSettingName) && settings.IsModuleActive();
     }
 

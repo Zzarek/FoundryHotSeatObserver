@@ -1,5 +1,6 @@
 import { GMSelectMode } from "./gm-select.js";
 import { HotSeatInitiative } from "./hot-seat-initiative.js";
+import { HideIconMode } from "./hide-hot-seat-icon.js";
 
 
 
@@ -13,13 +14,12 @@ export class StartUp{
 
         Hooks.on('updateCombat', (data, opt) => {
             HotSeatInitiative._onUpdateCombat(data, opt);
+
         });
 
         Hooks.on("controlToken", (token, isControlled) => {
             GMSelectMode._OnControlToken(token, isControlled);
-
-            if(!game.user.isGM && token.actor.isPC)
-                token.icon.visible = false;
+            HideIconMode._OnControlToken(token, isControlled);
         });
                      
         Hooks.on("updateUser", (user, updateData, options, userId) => {
