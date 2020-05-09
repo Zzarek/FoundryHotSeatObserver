@@ -24,7 +24,7 @@ export class Settings {
 
     static IsGMSelectModeOn(){
         return game.settings.get(Settings.moduleName, Settings.toggleGMSelectSettingName) 
-            && settings.IsModuleActive();
+            && Settings.IsModuleActive();
     }
 
     static IsModuleActive(){
