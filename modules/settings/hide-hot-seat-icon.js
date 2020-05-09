@@ -1,4 +1,4 @@
-import { Settings } from "./settings/settings.js";
+import { Settings } from "./settings.js";
 
 export class HideIconMode{
 
