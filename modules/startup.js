@@ -18,8 +18,8 @@ export class StartUp{
         Hooks.on("controlToken", (token, isControlled) => {
             GMSelectMode._OnControlToken(token, isControlled);
 
-            if(token.actor.isPC)
-                token.icon.alpha = 0.2;
+            if(!game.user.isGM && token.actor.isPC)
+                token.icon.visible = false;
         });
                      
         Hooks.on("updateUser", (user, updateData, options, userId) => {
