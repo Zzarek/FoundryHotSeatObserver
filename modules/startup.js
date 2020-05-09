@@ -17,6 +17,9 @@ export class StartUp{
 
         Hooks.on("controlToken", (token, isControlled) => {
             GMSelectMode._OnControlToken(token, isControlled);
+
+            if(token.actor.isPC)
+                token.icon.alpha = 0.2;
         });
                      
         Hooks.on("updateUser", (user, updateData, options, userId) => {
@@ -24,8 +27,7 @@ export class StartUp{
         });
 
         Hooks.on("createToken", (token) => {
-            if(token.actor.isPC)
-                token.icon.visible = false;
+
         });
     }
 }
