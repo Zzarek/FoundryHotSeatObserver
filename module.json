@@ -2,7 +2,7 @@
 	"name": "foundry-hot-seat-observer-test",
 	"title": "Hot Seat Observer Test",
 	"description": "Allows a Hot Seat player role to facilitate play sharing a screen",
-	"version": "0.3.73",
+	"version": "0.3.74",
 	"author": "Zzarek",
 	"languages": [
 		{
