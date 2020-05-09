@@ -8,6 +8,11 @@ export class HideIconMode{
         let hotSeatPlayerName = Settings.RetreiveHotSeatPlayerName();
         let hotSeatPlayerUser = game.users.players.find(t => t.name === hotSeatPlayerName);
 
+        let pcs = game.actors.entities.filter(t => t.isPC && t.data.permission[hotSeatPlayerUser.id] == "2");
+
+        pcs.array.forEach(element => {
+            
+        });
 
 
         let tokenViableForChange = token.actor && token.actor.isPC;
