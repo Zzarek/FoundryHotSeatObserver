@@ -13,7 +13,6 @@ export class StartUp{
 
         Hooks.on('updateCombat', (data, opt) => {
             HotSeatInitiative._onUpdateCombat(data, opt);
-
         });
 
         Hooks.on("controlToken", (token, isControlled) => {
