@@ -40,7 +40,7 @@ Hooks.on('init', () => {
 	hint: settings.localizedSettingHint(settings.hidePlayerIconsSettingName),
 	scope: "world",
 	config: true,
-	default: true,
+	default: false,
 	type: Boolean
   });
 
