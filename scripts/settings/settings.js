@@ -6,6 +6,12 @@ class settings{
     static toggleGMSelectSettingName = 'toggleGMSelect';
     static hotSeatPlayerNameSettingName = 'hotSeatPlayerName';
     static IsModuleActiveSettingName = 'enableHotSeatObserver';
+    static hidePlayerIconsSettingName = 'hidePlayerIcons';
+
+
+    static HidePlayerSettings(){
+        return game.settings.get(settings.moduleName, settings.hidePlayerIconsSettingName) && settings.IsModuleActive();
+    }
 
     static IsCameraPanModeOn(){
         return game.settings.get(settings.moduleName, settings.cameraMoveOnInitiativeSettingName) && settings.IsModuleActive();

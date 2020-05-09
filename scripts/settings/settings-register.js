@@ -35,5 +35,14 @@ Hooks.on('init', () => {
 	type: Boolean
   });
 
+  game.settings.register(settings.moduleName, settings.hidePlayerIconsSettingName, {
+	name: settings.localizedSettingName(settings.hidePlayerIconsSettingName),
+	hint: settings.localizedSettingHint(settings.hidePlayerIconsSettingName),
+	scope: "world",
+	config: true,
+	default: true,
+	type: Boolean
+  });
+
 
 });
