@@ -10,8 +10,6 @@ export class HideIconMode{
 
         let pcs = game.actors.entities.filter(t => t.isPC && t.data.permission[hotSeatPlayerUser.id] == "3");
 
-
-        let pcTokens = game.tokens.entities.filter(t => t.actor.isPC && t.actor.data.permission[hotSeatPlayerUser.id] == "3");
         let isUserGm = game.user.isGM;
 
         pcs.forEach(element => {
