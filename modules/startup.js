@@ -24,14 +24,19 @@ export class StartUp{
         Hooks.on("controlToken", (token, isControlled) => {
             GMSelectMode._OnControlToken(token, isControlled);
         });
-                
-        Hooks.on("updateToken", (token) => {
-            HideIconMode._OnRenderToken(token);
-        });
 
-        Hooks.on("renderToken", (token) => {
-            HideIconMode._OnRenderToken(token);
-        });         
+
+        Hooks.once('ready', () => { 
+
+            const original = Token.prototype.refresh;
+            
+            Token.prototype.refresh = function(){
+                var x = this;
+                HideIconMode._OnRenderToken();
+                original();
+            }
+        
+        });       
 
     }
 }
