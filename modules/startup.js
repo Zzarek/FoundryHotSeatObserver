@@ -29,13 +29,11 @@ export class StartUp{
         Hooks.once('ready', () => { 
 
             const original = Token.prototype.refresh;
-            
+
             Token.prototype.refresh = function(){
                 let isUserGm = game.user.isGM;
-                let hotSeatPlayerUser = game.users.players.find(t => t.name === Settings.RetreiveHotSeatPlayerName());
 
-
-                if(!isUserGm && t.actor.isPC && t.actor.hasPerm(game.user, hotSeatPlayerUser))
+                if(!isUserGm && t.actor.isPC)
                     HideIconMode.UpdateTokenVisibility(this);
 
                 original.apply(this);
