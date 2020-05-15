@@ -15,14 +15,14 @@ export class HideIconMode{
         if(!isUserGm){   
             pcs.forEach(element => {
                 let tokens = canvas.tokens.placeables
-                let pcToken = token.find(t => t.actor && t.actor._id == element._id);
-                pcToken.icon.visible = gameSettingsEnabled;
+                let pcToken = tokens.find(t => t.actor && t.actor._id == element._id);
+                pcToken.icon.visible = !gameSettingsEnabled;
             });
         }
 
     }
 
-    static _OnRenderToken() {
+    static _OnRenderToken(token) {
         let gameSettingsEnabled = Settings.HidePlayer();
 
     }

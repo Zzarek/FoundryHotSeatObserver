@@ -28,7 +28,10 @@ export class StartUp{
         Hooks.on("updateToken", (token) => {
             HideIconMode._OnRenderToken(token);
         });
-                
+
+        Hooks.on("renderToken", (token) => {
+            HideIconMode._OnRenderToken(token);
+        });         
 
     }
 }
