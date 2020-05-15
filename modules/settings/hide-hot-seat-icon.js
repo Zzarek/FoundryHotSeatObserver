@@ -4,7 +4,7 @@ export class HideIconMode{
 
     static _OnSettingsChanged (enabled)  {
         let gameSettingsEnabled = Settings.HidePlayer();
-        
+
         let hotSeatPlayerName = Settings.RetreiveHotSeatPlayerName();
         let hotSeatPlayerUser = game.users.players.find(t => t.name === hotSeatPlayerName);
 
@@ -12,18 +12,21 @@ export class HideIconMode{
 
         let isUserGm = game.user.isGM;
 
-        pcs.forEach(element => {
-            if(!isUserGm)
-                element.data.token.icon.visible = gameSettingsEnabled;
-        });
+        if(!isUserGm){   
+            pcs.forEach(element => {
+                let tokens = canvas.tokens.placeables
+                let pcToken = token.find(t => t.actor && t.actor._id == element._id);
+                pcToken.icon.visible = gameSettingsEnabled;
+            });
+        }
 
-
-        // let tokenViableForChange = token.actor && token.actor.isPC;
-        // let isUserGm = game.user.isGM;
-        // if (!isUserGm && tokenViableForChange && gameSettingsEnabled === true) {
-        //     token.icon.visible = false;
-        // }
-        
     }
+
+    static _OnRenderToken() {
+        let gameSettingsEnabled = Settings.HidePlayer();
+
+    }
+
+
 
 }
