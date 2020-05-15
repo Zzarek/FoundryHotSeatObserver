@@ -1,8 +1,8 @@
-{
-	"name": "foundry-hot-seat-observer",
-	"title": "Hot Seat Observer",
-	"description": "Switches Ownserhip and View for specific Player",
-	"version": "0.3.12",
+{ 
+	"name": "foundry-hot-seat-observer-test",
+	"title": "Hot Seat Observer Test",
+	"description": "Allows a Hot Seat player role to facilitate play sharing a screen",
+	"version": "0.5.5.01",
 	"author": "Zzarek",
 	"languages": [
 		{
@@ -11,13 +11,11 @@
 			"path": "lang/en.json"
 		}
 	],
-    	"scripts": [
-		"./scripts/settings.js",
-		"./scripts/gm-hot-seat-driver.js",
+	"esmodules": [
 		"foundry-hot-seat-observer.js" 
-	],
-    	"url": "https://github.com/zzarek/FoundryHotSeatObserver",
-    	"manifest": "https://raw.githubusercontent.com/zzarek/FoundryHotSeatObserver/master/module.json",
-    	"download": "https://github.com/zzarek/FoundryHotSeatObserver/archive/master.zip",
-	"minimumCoreVersion": "0.4.5"
+    ],
+    "url": "https://github.com/zzarek/FoundryHotSeatObserver",
+    "manifest": "https://raw.githubusercontent.com/zzarek/FoundryHotSeatObserver/master/module.json",
+    "download": "https://github.com/zzarek/FoundryHotSeatObserver/archive/master.zip",
+	"minimumCoreVersion": "0.5.5"
 }
