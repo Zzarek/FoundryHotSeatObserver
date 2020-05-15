@@ -31,9 +31,7 @@ export class StartUp{
             const original = Token.prototype.refresh;
 
             Token.prototype.refresh = function(){
-                let isUserGm = game.user.isGM;
-
-                if(!isUserGm && t.actor.isPC)
+                if(!game.user.isGM && t.actor.isPC)
                     HideIconMode.UpdateTokenVisibility(this);
 
                 original.apply(this);
