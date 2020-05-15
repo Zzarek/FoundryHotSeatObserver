@@ -3,13 +3,13 @@ import { Settings } from "./settings/settings.js";
 export class HotSeatInitiative {
 
     static _onUpdateCombat(data, opt) {
-        if (settings.IsModuleActive()) {
+        if (Settings.IsModuleActive()) {
             //Leave Hot Seat in for Legacy and testing.
-           if (settings.IsCurrentPlayerInHotSeatRole()) {
+           if (Settings.IsCurrentPlayerInHotSeatRole()) {
                var currentCombatant = data.combatant;
    
                if(currentCombatant.owner && currentCombatant.visible) {
-                       let isCameraPanEnabled = settings.IsCameraPanModeOn();
+                       let isCameraPanEnabled = Settings.IsCameraPanModeOn();
    
                        if(isCameraPanEnabled)
                            game.user.update({character: currentCombatant.actor.id});
