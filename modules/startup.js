@@ -31,12 +31,21 @@ export class StartUp{
             const original = Token.prototype.refresh;
             
             Token.prototype.refresh = function(){
-                var x = this;
-                HideIconMode._OnRenderToken();
-                original();
+                let isUserGm = game.user.isGM;
+                let hotSeatPlayerUser = game.users.players.find(t => t.name === Settings.RetreiveHotSeatPlayerName());
+
+
+                if(!isUserGm && t.actor.isPC && t.actor.hasPerm(game.user, hotSeatPlayerUser))
+                    HideIconMode.UpdateTokenVisibility(this);
+
+                original.apply(this);
             }
+
         
         });       
+
+
+
 
     }
 }

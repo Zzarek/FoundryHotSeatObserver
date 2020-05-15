@@ -3,8 +3,6 @@ import { Settings } from "./settings.js";
 export class HideIconMode{
 
     static _OnSettingsChanged (enabled)  {
-        let gameSettingsEnabled = Settings.HidePlayer();
-
         let hotSeatPlayerName = Settings.RetreiveHotSeatPlayerName();
         let hotSeatPlayerUser = game.users.players.find(t => t.name === hotSeatPlayerName);
 
@@ -16,15 +14,15 @@ export class HideIconMode{
             pcs.forEach(element => {
                 let tokens = canvas.tokens.placeables
                 let pcToken = tokens.find(t => t.actor && t.actor._id == element._id);
-                pcToken.icon.visible = !gameSettingsEnabled;
+                this.UpdateTokenVisibility(pcToken);
             });
         }
 
     }
 
-    static _OnRenderToken(token) {
+    static UpdateTokenVisibility(token) {
         let gameSettingsEnabled = Settings.HidePlayer();
-
+        token.icon.visible = !gameSettingsEnabled;
     }
 
 
