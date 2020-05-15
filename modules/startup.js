@@ -31,10 +31,10 @@ export class StartUp{
             const original = Token.prototype.refresh;
 
             Token.prototype.refresh = function(){
-                if(!game.user.isGM && t.actor.isPC)
-                    HideIconMode.UpdateTokenVisibility(this);
-
                 original.apply(this);
+
+                if(!game.user.isGM && this.actor.isPC)
+                    HideIconMode.UpdateTokenVisibility(this);
             }
 
         
