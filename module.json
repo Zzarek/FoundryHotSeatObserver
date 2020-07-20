@@ -2,7 +2,7 @@
 	"name": "foundry-hot-seat-observer",
 	"title": "Hot Seat Observer",
 	"description": "Allows a Hot Seat player role to facilitate play sharing a screen",
-	"version": "0.5.5.02",
+	"version": "0.6.01",
 	"author": "Zzarek",
 	"languages": [
 		{
@@ -17,5 +17,6 @@
     "url": "https://github.com/zzarek/FoundryHotSeatObserver",
     "manifest": "https://raw.githubusercontent.com/zzarek/FoundryHotSeatObserver/master/module.json",
     "download": "https://github.com/zzarek/FoundryHotSeatObserver/archive/master.zip",
-	"minimumCoreVersion": "0.5.5"
+    "minimumCoreVersion": "0.5.5",
+    "compatibleCoreVersion": "0.6.5"
 }
