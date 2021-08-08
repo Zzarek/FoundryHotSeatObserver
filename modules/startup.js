@@ -2,6 +2,7 @@ import { GMSelectMode } from "./gm-select.js";
 import { HotSeatInitiative } from "./hot-seat-initiative.js";
 import { registerSettings } from "./settings/settings-register.js";
 import { HideIconMode } from "./settings/hide-hot-seat-icon.js";
+import { Settings } from "./settings/settings.js";
 
 
 export class StartUp{
@@ -27,7 +28,7 @@ export class StartUp{
 
 
         Hooks.once('ready', () => { 
-            libWrapper.register("HotSeatSpectator","Token.prototype.refresh",tokenProtoRefresh,"WRAPPER");       
+            libWrapper.register(Settings.moduleName,"Token.prototype.refresh",tokenProtoRefresh,"WRAPPER");       
         });       
 
 

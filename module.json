@@ -12,7 +12,7 @@
 		}
 	],
 	"esmodules": [
-		"foundry-hot-seat-observer.js" 
+		"foundry-hot-seat-spectator.js" 
     	],
     	"url": "https://github.com/zzarek/FoundryHotSeatObserver",
     	"manifest": "https://raw.githubusercontent.com/zzarek/FoundryHotSeatObserver/master/module.json",

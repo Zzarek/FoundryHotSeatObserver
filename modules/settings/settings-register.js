@@ -5,8 +5,8 @@ import { HideIconMode } from "./hide-hot-seat-icon.js";
 export function registerSettings() {
 
 	game.settings.register(Settings.moduleName, Settings.IsModuleActiveSettingName, {
-		name: game.i18n.localize("fhso.enableHotSeatObserver.name"),
-		hint: game.i18n.localize("fhso.enableHotSeatObserver.hint"),
+		name: game.i18n.localize("fhso.enableHotSeatSpectator.name"),
+		hint: game.i18n.localize("fhso.enableHotSeatSpectator.hint"),
 		scope: "world",
 		config: true,
 		default: true,
@@ -27,7 +27,7 @@ export function registerSettings() {
  		hint: Settings.localizedSettingHint(Settings.hotSeatPlayerNameSettingName),
  		scope: "world",
  		config: true,
- 		default: "Observer",
+ 		default: "Spectator",
  		type: String
 	});
 

@@ -1,11 +1,11 @@
 export class Settings {
 
-    static moduleName = 'foundry-hot-seat-observer';
+    static moduleName = 'foundry-hot-seat-spectator';
 
     static cameraMoveOnInitiativeSettingName = 'cameraMoveOnInitiative';
     static toggleGMSelectSettingName = 'toggleGMSelect';
     static hotSeatPlayerNameSettingName = 'hotSeatPlayerName';
-    static IsModuleActiveSettingName = 'enableHotSeatObserver';
+    static IsModuleActiveSettingName = 'enableHotSeatSpectator';
     static hidePlayerIconsSettingName = 'hidePlayerIcons';
 
 

@@ -16,7 +16,7 @@ export class HotSeatInitiative {
                        else
                            game.user.update({}, {diff: false, character: currentCombatant.actor.id});
                        let token = canvas.tokens.placeables
-                           .filter(t => t.actor && t.actor.hasPerm(game.user, "OBSERVER")).find(a => a.id == currentCombatant.token._id);
+                           .filter(t => t.actor && t.actor.hasPerm(game.user, "SPECTATOR")).find(a => a.id == currentCombatant.token._id);
                        if(token)    
                            token.control({initializeSight: false});
    
