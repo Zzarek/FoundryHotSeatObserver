@@ -2,7 +2,7 @@
 	"name": "foundry-hot-seat-observer",
 	"title": "Hot Seat Spectator",
 	"description": "Allows a Hot Seat player role to facilitate play sharing a screen",
-	"version": "0.6.01",
+	"version": "0.7.01",
 	"author": "Zzarek",
 	"languages": [
 		{
@@ -15,8 +15,8 @@
 		"foundry-hot-seat-spectator.js" 
     	],
     	"url": "https://github.com/zzarek/FoundryHotSeatObserver",
-    	"manifest": "https://raw.githubusercontent.com/zzarek/FoundryHotSeatObserver/master/module.json",
-    	"download": "https://github.com/zzarek/FoundryHotSeatObserver/archive/master.zip",
+    	"manifest": "https://raw.githubusercontent.com/zzarek/FoundryHotSeatObserver/SmallImprovements/module.json",
+    	"download": "https://github.com/zzarek/FoundryHotSeatObserver/archive/SmallImprovements.zip",
     	"minimumCoreVersion": "0.5.5",
-    	"compatibleCoreVersion": "0.8.5"
+    	"compatibleCoreVersion": "0.8.8"
 }
