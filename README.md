@@ -12,7 +12,7 @@ Classically hotseat refered to players taking turns at a keyboard, so in the sam
 
 You may rename the spectator player in the settings
 
-You may diable camera panning on initiative
+You may disable camera panning on initiative
 
 You may choose to have the GM control the entire screen by enabling an option where if he clicks on a player token, the spectator 
 activates that token
