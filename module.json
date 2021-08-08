@@ -1,8 +1,8 @@
 { 
-	"name": "foundry-hot-seat-observer",
+	"name": "foundry-hot-seat-spectator",
 	"title": "Hot Seat Spectator",
 	"description": "Allows a Hot Seat player role to facilitate play sharing a screen",
-	"version": "0.7.01",
+	"version": "0.7.02",
 	"author": "Zzarek",
 	"languages": [
 		{
