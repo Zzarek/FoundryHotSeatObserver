@@ -16,7 +16,7 @@
     	],
     	"url": "https://github.com/zzarek/FoundryHotSeatObserver",
     	"manifest": "https://raw.githubusercontent.com/zzarek/FoundryHotSeatObserver/SmallImprovements/module.json",
-    	"download": "https://github.com/zzarek/FoundryHotSeatObserver/archive/smallimprovements.zip",
+    	"download": "https://github.com/zzarek/FoundryHotSeatObserver/archive/SmallImprovements.zip",
     	"minimumCoreVersion": "0.5.5",
     	"compatibleCoreVersion": "0.8.8"
 }
