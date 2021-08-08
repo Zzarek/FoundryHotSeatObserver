@@ -27,18 +27,16 @@ export class StartUp{
 
 
         Hooks.once('ready', () => { 
-
-            const original = Token.prototype.refresh;
-
-            Token.prototype.refresh = function(){
-                original.apply(this);
-
-                if(!game.user.isGM && this.actor.isPC)
-                    HideIconMode.UpdateTokenVisibility(this);
-            }
-
-        
+            libWrapper.register("HotSeatSpectator","Token.prototype.refresh",tokenProtoRefresh,"WRAPPER");       
         });       
+
+
+        function tokenProtoRefresh(wrapped,...args){
+            wrapped(...args);
+
+            if(!game.user.isGM && this.actor.isPC)
+                HideIconMode.UpdateTokenVisibility(this);
+        }    
 
 
 
