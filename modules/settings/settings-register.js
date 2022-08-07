@@ -1,5 +1,4 @@
 import { Settings } from "./settings.js";
-import { HideIconMode } from "./hide-hot-seat-icon.js";
 
 
 export function registerSettings() {
@@ -37,18 +36,6 @@ export function registerSettings() {
  		scope: "world",
  		config: true,
  		default: true,
- 		type: Boolean
-	});
-
-	game.settings.register(Settings.moduleName, Settings.hidePlayerIconsSettingName, {
- 		name: Settings.localizedSettingName(Settings.hidePlayerIconsSettingName),
- 		hint: Settings.localizedSettingHint(Settings.hidePlayerIconsSettingName),
- 		scope: "world",
- 		config: true,
-		efault: false,
-		onChange: enabled => {
-			HideIconMode._OnSettingsChanged(enabled);
-		},
  		type: Boolean
 	});
 

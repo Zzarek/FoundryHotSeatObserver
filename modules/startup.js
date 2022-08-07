@@ -1,11 +1,8 @@
 import { GMSelectMode } from "./gm-select.js";
 import { HotSeatInitiative } from "./hot-seat-initiative.js";
 import { registerSettings } from "./settings/settings-register.js";
-import { HideIconMode } from "./settings/hide-hot-seat-icon.js";
-
 
 export class StartUp{
-
 
     static Register(){
         Hooks.on("init", () => {
@@ -24,24 +21,6 @@ export class StartUp{
         Hooks.on("controlToken", (token, isControlled) => {
             GMSelectMode._OnControlToken(token, isControlled);
         });
-
-
-        Hooks.once('ready', () => { 
-
-            const original = Token.prototype.refresh;
-
-            Token.prototype.refresh = function(){
-                original.apply(this);
-
-                if(!game.user.isGM && this.actor.isPC)
-                    HideIconMode.UpdateTokenVisibility(this);
-            }
-
         
-        });       
-
-
-
-
     }
 }
