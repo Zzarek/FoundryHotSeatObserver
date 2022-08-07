@@ -8,7 +8,7 @@ export class HotSeatInitiative {
            if (Settings.IsCurrentPlayerInHotSeatRole()) {
                var currentCombatant = data.combatant;
    
-               if(currentCombatant.owner && currentCombatant.visible) {
+               if(currentCombatant.isOwner && currentCombatant.visible) {
                        let isCameraPanEnabled = Settings.IsCameraPanModeOn();
    
                        if(isCameraPanEnabled)
@@ -16,7 +16,7 @@ export class HotSeatInitiative {
                        else
                            game.user.update({}, {diff: false, character: currentCombatant.actor.id});
                        let token = canvas.tokens.placeables
-                           .filter(t => t.actor && t.actor.hasPerm(game.user, "OBSERVER")).find(a => a.id == currentCombatant.token._id);
+                           .filter(t => t.actor && t.actor.permission >= CONST.DOCUMENT_PERMISSION_LEVELS.OBSERVER).find(a => a.id == currentCombatant.token.id);
                        if(token)    
                            token.control({initializeSight: false});
    
